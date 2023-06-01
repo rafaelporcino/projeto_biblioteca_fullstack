@@ -1,13 +1,13 @@
 const express = require("express");
-const clienteController = require("../controller/cliente_controller")
+const autorController = require("../controller/autor_controller")
 
 const router = express.Router();
 
-//api/clientes
-router.get('/',clienteController.listar)
-router.get('/:id', clienteController.buscarPorId)
-router.post('/', clienteController.inserir)
-router.put('/:id', clienteController.atualizar)
-router.delete('/:id', clienteController.deletar)
+//api/autors
+router.get('/',autorController.listar)
+router.get('/:id', autorController.buscarPorId)
+router.post('/', autorController.inserir)
+router.put('/:id', autorController.atualizar)
+router.delete('/:id', autorController.deletar)
 
 module.exports = router;

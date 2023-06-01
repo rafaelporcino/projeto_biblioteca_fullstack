@@ -1,14 +1,14 @@
-const clienteNegocio = require("../negocio/cliente_negocio");
+const usuarioNegocio = require("../negocio/usuario_negocio");
 
 async function listar(req, res) {    
     //Obtem os dados request
     //Trata a funcionalidade de negocio
     try{
         console.log(">> Controller 1")
-        const listaClientes = await clienteNegocio.listar();
+        const listausuarios = await usuarioNegocio.listar();
         //Gera o response adequadamente
         console.log(">> Controller 2")
-        res.json(listaClientes);  
+        res.json(listausuarios);  
     } 
     catch(err) {
         res.status(500).json({erro: err})
@@ -20,9 +20,9 @@ async function buscarPorId(req, res) {
     const id = req.params.id;
     try{ 
         //Trata a funcionalidade de negocio
-        const cliente = await clienteNegocio.buscarPorId(id);
+        const usuario = await usuarioNegocio.buscarPorId(id);
         //Gera o response adequadamente  
-        res.json(cliente);
+        res.json(usuario);
     }
     catch(err) {
         if(err.status) {
@@ -36,12 +36,12 @@ async function buscarPorId(req, res) {
 
 async function inserir(req, res) {    
     //Obtem os dados request
-    const cliente = req.body;
+    const usuario = req.body;
     //Trata a funcionalidade de negocio
     try{ 
-        const clienteInserido = await clienteNegocio.inserir(cliente);
+        const usuarioInserido = await usuarioNegocio.inserir(usuario);
         //Gera o response adequadamente  
-        res.status(201).json(clienteInserido);
+        res.status(201).json(usuarioInserido);
     } 
     catch (err) {
         if(err.status) {
@@ -56,13 +56,13 @@ async function inserir(req, res) {
 async function atualizar(req, res) {    
     //Obtem os dados request
     const id = req.params.id;
-    const cliente = req.body;
+    const usuario = req.body;
 
     //Trata a funcionalidade de negocio
     try{ 
-        const clienteAtualizado = await clienteNegocio.atualizar(id, cliente);
+        const usuarioAtualizado = await usuarioNegocio.atualizar(id, usuario);
         //Gera o response adequadamente  
-        res.json(clienteAtualizado);
+        res.json(usuarioAtualizado);
     } 
     catch (err) {
         if(err.status) {
@@ -79,9 +79,9 @@ async function deletar(req, res) {
     const id = req.params.id;
     try{ 
         //Trata a funcionalidade de negocio
-        const cliente = await clienteNegocio.deletar(id);
+        const usuario = await usuarioNegocio.deletar(id);
         //Gera o response adequadamente  
-        res.json(cliente);
+        res.json(usuario);
     }
     catch(err) {
         if(err.status) {

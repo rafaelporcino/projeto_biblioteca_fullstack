@@ -1,13 +1,13 @@
 const express = require("express");
-const clienteController = require("../controller/cliente_controller")
+const uauarioController = require("../controller/uauario_controller")
 
 const router = express.Router();
 
-//api/clientes
-router.get('/',clienteController.listar)
-router.get('/:id', clienteController.buscarPorId)
-router.post('/', clienteController.inserir)
-router.put('/:id', clienteController.atualizar)
-router.delete('/:id', clienteController.deletar)
+//api/uauarios
+router.get('/',uauarioController.listar)
+router.get('/:id', uauarioController.buscarPorId)
+router.post('/', uauarioController.inserir)
+router.put('/:id', uauarioController.atualizar)
+router.delete('/:id', uauarioController.deletar)
 
 module.exports = router;
