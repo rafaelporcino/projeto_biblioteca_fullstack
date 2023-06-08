@@ -15,7 +15,7 @@ app.use("/api/hello", function(req, res) {
 })
 
 //A partir daqui aplica o Middleware
-app.use(authMiddleware.verificarToken);
+//app.use(authMiddleware.verificarToken);
 
 app.use("/api/clientes", clienteRota);
 

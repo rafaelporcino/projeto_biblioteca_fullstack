@@ -3,9 +3,9 @@ const {Client} = require("pg")
 const conexao = {
     host: 'localhost',
     port: 5433,
-    database: 'crud_clientes',
+    database: 'biblioteca',
     user: 'postgres',
-    password: '123456'
+    password: 'postgres'
 };
 
 async function listar() {

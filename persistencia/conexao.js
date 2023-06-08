@@ -1,6 +1,6 @@
 const conexao = {
     host: 'localhost',
-    port: 5435,
+    port: '5433',
     database: 'biblioteca',
     user: 'postgres',
     password:'postgres'
