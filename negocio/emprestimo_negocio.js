@@ -1,5 +1,5 @@
 const {validarEmprestimo} = require('./emprestimo_validacao')
-const emprestimoPersistence = require('../persistence/emprestimo_persistence')
+const emprestimoPersistence = require('../persistencia/emprestimo_persistence')
 
 
 async function inserir(emprestimo) {

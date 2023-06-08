@@ -1,5 +1,10 @@
 const express = require('express');
 const clienteRota = require('./rota/cliente_rota')
+const autorRota = require('./rota/autor_rota')
+const emprestimoRota = require('./rota/emprestimo_rota')
+const livroRota = require('./rota/livro_rota')
+const situacaoRota = require('./rota/situacao_rota')
+const usuarioRota = require('./rota/usuario_rota')
 const loginRota = require('./rota/login_rota')
 const authMiddleware = require('./middleware/auth_middleware')
 
@@ -18,6 +23,11 @@ app.use("/api/hello", function(req, res) {
 //app.use(authMiddleware.verificarToken);
 
 app.use("/api/clientes", clienteRota);
+app.use("/api/autor", autorRota);
+app.use("/api/emprestimo", emprestimoRota);
+app.use("/api/livro", livroRota);
+app.use("/api/situacao", situacaoRota);
+app.use("/api/usuario", usuarioRota);
 
 app.listen (3000, () => { 
     console.log("Iniciando o servidor...");

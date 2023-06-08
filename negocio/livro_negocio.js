@@ -1,5 +1,5 @@
 const {validarlivro} = require('./livro_validacao')
-const livroPersistence = require('../persistence/livro_persistence')
+const livroPersistence = require('../persistencia/livro_persistence')
 
 
 async function inserir(livro) {

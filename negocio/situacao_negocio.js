@@ -1,5 +1,5 @@
 const {validarSituacao} = require('./situacao_validacao')
-const situacaoPersistence = require('../persistence/situacao_persistence')
+const situacaoPersistence = require('../persistencia/situacao_persistence')
 
 
 async function inserir(situacao) {
