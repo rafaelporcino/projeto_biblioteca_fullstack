@@ -1,4 +1,4 @@
-const clientePersistencia = require("../persistencia/cliente_persistencia");
+const clientePersistencia = require("../persistence/cliente_persistencia");
 
 let listaClientes = [];
 let idAutoIncrement = 1;

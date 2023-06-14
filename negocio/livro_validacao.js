@@ -6,5 +6,5 @@ function validarLivro(livro) {
 }
 
 module.exports = {
-    validarlivro
+    validarLivro
 }

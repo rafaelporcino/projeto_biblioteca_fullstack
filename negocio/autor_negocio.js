@@ -1,5 +1,5 @@
 const {validarAutor} = require('./autor_validacao')
-const autorPersistence = require('../persistencia/autor_persistence')
+const autorPersistence = require('../persistence/autor_persistence')
 
 
 async function inserir(autor) {

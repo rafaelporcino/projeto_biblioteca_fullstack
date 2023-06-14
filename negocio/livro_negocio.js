@@ -1,5 +1,5 @@
 const {validarlivro} = require('./livro_validacao')
-const livroPersistence = require('../persistencia/livro_persistence')
+const livroPersistence = require('../persistence/livro_persistence')
 
 
 async function inserir(livro) {
@@ -19,7 +19,7 @@ async function listar() {
 async function buscarPorId(id) {
     const livro = await livroPersistence.buscarPorId(id);
     if(!livro) {
-        throw { id: 404, mensagem: `livro ${id} nao encontrado`};
+      //  throw { id: 404, mensagem: `livro ${id} nao encontrado`};
     }
     return livro;
 }

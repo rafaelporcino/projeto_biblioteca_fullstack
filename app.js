@@ -15,9 +15,9 @@ app.use(express.urlencoded({extended:true}));
 
 app.use("/api/login", loginRota);
 
-app.use("/api/hello", function(req, res) {
-    res.send("Hello World!");
-})
+//app.use("/api/hello", function(req, res) {
+//    res.send("Hello World!");
+//})
 
 //A partir daqui aplica o Middleware
 //app.use(authMiddleware.verificarToken);
