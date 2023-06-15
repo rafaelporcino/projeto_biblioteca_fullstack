@@ -29,7 +29,7 @@ async function buscarPorId(req, res) {
             res.status(err.status).json(err);
         }
         else {
-            res.status(500).json({message: "Erro nao identificado"});
+            res.status(500).json({message: "Erro nao identificado Buscar"});
         }
     }
 }
@@ -48,7 +48,7 @@ async function inserir(req, res) {
             res.status(err.status).json(err);
         }
         else {
-            res.status(500).json({message: "Erro nao identificado"});
+            res.status(500).json({message: "Erro nao identificado Inserir"});
         }
     }
 }
@@ -69,7 +69,7 @@ async function atualizar(req, res) {
             res.status(err.status).json(err);
         }
         else {
-            res.status(500).json({message: "Erro nao identificado"});
+            res.status(500).json({message: "Erro nao identificado Atualiza Emprestimo"});
         }
     }
 }
@@ -88,7 +88,7 @@ async function deletar(req, res) {
             res.status(err.status).json(err);
         }
         else {
-            res.status(500).json({message: "Erro nao identificado"});
+            res.status(500).json({message: "Erro nao identificado Deletar"});
         }
     }
 }

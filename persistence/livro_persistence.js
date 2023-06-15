@@ -61,10 +61,20 @@ async function buscarPorNome(nome) {
     return res.rows;
 }
 
+async function deleta(id) {
+    const cliente = new Client(conexao)
+    await cliente.connect();
+    const res = await cliente.query('delete from livro WHERE livro.id=$1',[id]);
+    await cliente.end();
+    return res.rows[0];
+}
+
+
 module.exports = {
     listar, 
     inserir,         
     buscarPorId, 
     buscarPorNome,
-    atualizar
+    atualizar,
+    deleta 
 }
