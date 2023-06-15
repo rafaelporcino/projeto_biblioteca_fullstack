@@ -29,7 +29,7 @@ async function buscarPorId(req, res) {
             res.status(err.status).json(err);
         }
         else {
-            res.status(500).json({message: "Erro nao identificado"});
+            res.status(500).json({message: "Erro nao identificado Busca Oid Livro"});
         }
     }
 }
