@@ -48,7 +48,7 @@ async function atualizar(id, livro) {
 async function buscarPorId(id) {
     const cliente = new Client(conexao)
     await cliente.connect();
-    const res = await cliente.query('SELECT livro.id,autor.id,autor.nome,livro.titulo FROM livroINNER JOIN autor ON livro.id = livro.id_autor where   WHERE livro.id=$1',[id]);
+    const res = await cliente.query('SELECT livro.id,autor.id,autor.nome,livro.titulo FROM livro INNER JOIN autor ON livro.id = livro.id_autor where   WHERE livro.id=$1',[id]);
     await cliente.end();
     return res.rows[0];
 }
