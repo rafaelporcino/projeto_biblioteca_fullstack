@@ -12,6 +12,7 @@ const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
+
 // Adicionar os cabeçalhos Access-Control-Allow-Origin
 app.use((req, res, next) => {
     //res.setHeader("Access-Control-Allow-Origin", "http://localhost:3001/");
@@ -19,6 +20,7 @@ app.use((req, res, next) => {
     res.header("Access-Control-Allow-Headers","Origin, X-Requested-With, Content-Type, Accept" );
     next();
   });
+  
 app.use("/api/login", loginRota);
 
 app.use("/api/hello", function(req, res) {
