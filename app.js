@@ -20,7 +20,7 @@ app.use((req, res, next) => {
     res.header("Access-Control-Allow-Headers","Origin, X-Requested-With, Content-Type, Accept" );
     next();
   });
-  
+
 app.use("/api/login", loginRota);
 
 app.use("/api/hello", function(req, res) {
@@ -35,7 +35,7 @@ app.use("/api/autor", autorRota);
 app.use("/api/emprestimo", emprestimoRota);
 app.use("/api/livro", livroRota);
 app.use("/api/situacao", situacaoRota);
-app.use("/api/usuario", usuarioRota);
+app.use("/api/usuarios", usuarioRota);
 
 app.listen (3000, () => { 
     console.log("Iniciando o servidor...");
